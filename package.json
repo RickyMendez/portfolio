@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Ricky's portfolio",
   "main": "index.js",
+  "homepage": "https://rickymendez.github.io/portfolio",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Ricky Mendez",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "node-sass": "^4.9.3"
   }
 }
