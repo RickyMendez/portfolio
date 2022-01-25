@@ -8,13 +8,22 @@ const btnLine = document.querySelectorAll('.btn-line');
 
 // Set Initial State of Menu
 let showMenu = false;
+let isScrolled = false;
 menuBtn.addEventListener('click', toggleMenu);
-window.addEventListener("scroll", updateMenuColor);
+window.addEventListener("scroll", updateMenuLineColor);
 
-function updateMenuColor(){
-  if (window.scrollY != 0){
-    btnLine.forEach(item => item.classList.add('btn-line-scroll'));
-  } else {
+function updateMenuLineColor(){
+  if (!showMenu || !isScrolled){
+    if (window.scrollY != 0){
+      btnLine.forEach(item => item.classList.add('btn-line-scroll'));
+      isScrolled = true;
+    } else {
+      btnLine.forEach(item => item.classList.remove('btn-line-scroll'));
+      isScrolled = false;
+    }
+  }
+
+  if (showMenu){
     btnLine.forEach(item => item.classList.remove('btn-line-scroll'));
   }
 }
@@ -30,6 +39,7 @@ function toggleMenu() {
 
     // Set Menu State
     showMenu = true;
+    updateMenuLineColor();
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
@@ -40,5 +50,6 @@ function toggleMenu() {
 
     // Set Menu State
     showMenu = false;
+    updateMenuLineColor();
   }
 }
