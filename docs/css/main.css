@@ -1,3 +1,4 @@
+/* Menu styles */
 .menu-btn {
   position: absolute;
   z-index: 5;
@@ -99,15 +100,6 @@
   transform: translate3d(0, 0, 0);
 }
 
-.menu-branding .portrait {
-  width: 250px;
-  height: 250px;
-  background: url('../img/portrait-pub.jpg') center no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  border: solid 3px #eece1a;
-}
-
 .menu .nav-item {
   -webkit-transform: translate3d(600px, 0, 0);
   transform: translate3d(600px, 0, 0);
@@ -160,7 +152,20 @@
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
+/* End Menu Styles */
 
+/* Image Styles*/
+.portrait {
+  width: 250px;
+  height: 250px;
+  background: url('../img/portrait-pub.jpg') center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: solid 3px #eece1a;
+}
+/* End Image Styles*/
+
+/* Static html styles */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -227,7 +232,9 @@ header {
 .text-secondary {
   color: #eece1a;
 }
+/* End Static html styles */
 
+/* Main Container Styles */
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
@@ -246,7 +253,9 @@ main .icons a:hover {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+/* End Main Container Styles */
 
+/* Home Page Styles */
 main#home {
   overflow: hidden;
 }
@@ -254,7 +263,9 @@ main#home {
 main#home h1 {
   margin-top: 20vh;
 }
+/* End Home Page Styles */
 
+/* About Page Styles */
 .about-info {
   display: -ms-grid;
   display: grid;
@@ -262,8 +273,6 @@ main#home h1 {
   grid-template-areas:
     'bioimage bio bio'
     'c1 c2 c3';
-  /* -ms-grid-columns: (1fr) [3]; */
-  /* grid-template-columns: repeat(3, 1fr); */
 }
 
 .about-info .bio-image {
@@ -310,7 +319,9 @@ main#home h1 {
 .about-info .info-det ul {
   list-style: none;
 }
+/* End About Page Styles */
 
+/* Contact Box Styles */
 .boxes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +356,9 @@ main#home h1 {
 .boxes div:hover span {
   color: #000;
 }
+/* End Contact Box Styles */
 
+/* Footer Styles */
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -353,7 +366,9 @@ main#home h1 {
   color: #fff;
   height: 60px;
 }
+/* End Footer Styles */
 
+/* Medium Screen size Styles Ex: Tablets */
 @media screen and (max-width: 768px) {
   main {
     -webkit-box-align: center;
@@ -387,7 +402,7 @@ main#home h1 {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
-  .menu-branding .portrait {
+  .portrait {
     height: 150px;
     width: 150px;
   }
@@ -401,11 +416,25 @@ main#home h1 {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
-}
 
+  .portrait-container {
+    width: 100%;
+  }
+  .portrait-container .portrait {
+    margin: 0 auto;
+  }
+}
+/* End Medium Screen Styles */
+
+/* Small Screen Styles Ex: Phones */
 @media screen and (max-width: 500px) {
-  main#home h1 {
+  main {
+    margin: 4px;
+    padding: 4px;
+  }
+  main h1 {
     margin-top: 10vh;
   }
 }
+/* End Small Screen Styles */
 /*# sourceMappingURL=main.css.map */
