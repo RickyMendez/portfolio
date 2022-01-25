@@ -18,6 +18,14 @@
   transition: all 0.5s ease-out;
 }
 
+.menu-btn .btn-line-scroll {
+  background: #000;
+}
+
+/* .btn-line-top {
+  background: #fff;
+} */
+
 .menu-btn.close {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
